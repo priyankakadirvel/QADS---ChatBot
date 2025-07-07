@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QADS: Data Science Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>QADS: Your Data Science Study Buddy</h1>
+        <form method="post">
+            <input type="text" name="question" placeholder="Ask a Data Science question..." required>
+            <button type="submit">Ask</button>
+        </form>
+        {% if answer %}
+            <div class="answer-box">{{ answer }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
